@@ -35,10 +35,16 @@ double avgVector(vector<int> values)
 {
     double total;
 
-    for (int val : values)
+    if (values.empty())
     {
-        total += val;
+        cout << "No values to average.\n";
+        return 1;
+    }
+    else
+    {
+        for (int val : values)
+            total += val;
     }
 
-    return (total / values.size());
+    return (total / values.size()); // Average of values
 }
