@@ -1,23 +1,27 @@
-// This program asks the user for a file name. We assume the file
-// contains a series of numbers, each on a separate line.
-// The program reads the contents of the file into an array
-// and displays the lowest, highest, total, and average of the numbers.
+// This program reads numerical data from a file and calculates some simple statistics
 #include <iostream>
 #include <fstream>
 #include <vector>
 using namespace std;
 
-// Prototypes
-
 int main()
 {
     ifstream inputFile;
-    int lowest;
-    int highest;
-    int total;
-    float average;
+    vector<int> numVector;
+    int number;
 
     inputFile.open("numbers.txt");
 
+    while (inputFile >> number)
+    {
+        numVector.push_back(number);
+    }
+
     inputFile.close();
+
+    for (int n : numVector)
+    {
+        cout << n << endl;
+    }
+    return 0;
 }
