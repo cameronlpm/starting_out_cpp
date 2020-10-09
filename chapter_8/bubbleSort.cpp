@@ -7,13 +7,13 @@ void sortArray(int list[], int size)
     do
     {
         swap = false;
-        for (int count = 0; count < size - 1; count++)
+        for (int index = 0; index < size - 1; index++)
         {
-            if (list[count] > list[count + 1])
+            if (list[index] > list[index + 1])
             {
-                temp = list[count];
-                list[count] = list[count + 1];
-                list[count + 1] = temp;
+                temp = list[index];
+                list[index] = list[index + 1];
+                list[index + 1] = temp;
                 swap = true;
             }
         }
