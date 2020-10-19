@@ -13,8 +13,8 @@ struct InventoryItem
 };
 
 // Function Prototypes
-void getItem(InventoryItem &); // argument passed by reference
-void showItem(InventoryItem);  // argument passed by value
+void getItem(InventoryItem &);        // argument passed by reference
+void showItem(const InventoryItem &); // argument passed by value
 
 int main()
 {
@@ -50,7 +50,7 @@ void getItem(InventoryItem &p)
 
 // Function showItem accepts an argument of the InventoryItem structure type.
 // The contents of the structure are displayed.
-void showItem(InventoryItem p)
+void showItem(const InventoryItem &p)
 {
     cout << fixed << showpoint << setprecision(2);
     cout << "Part Number: " << p.partNum << endl;
