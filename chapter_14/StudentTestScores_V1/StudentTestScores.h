@@ -9,14 +9,14 @@ class StudentTestScores
 {
 private:
     string studentName;
-    double *testScores; // points to an array of test scores
+    int *testScores; // points to an array of test scores
     int numTestScores;
 
     // Private member function to create an array of test scores
     void createTestScoresArray(int size)
     {
         numTestScores = size;
-        testScores = new double[size];
+        testScores = new int[size];
         for (int i = 0; i < size; i++)
             testScores[i] = DEFAULT_SCORE;
     }
@@ -45,7 +45,7 @@ public:
     int getNumTestScores() const { return numTestScores; }
 
     // Get a specific test score
-    double getTestScore(int index) const { return testScores[index]; }
+    int getTestScore(int index) const { return testScores[index]; }
 };
 
 #endif
