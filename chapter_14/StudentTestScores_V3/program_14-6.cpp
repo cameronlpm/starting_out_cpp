@@ -25,3 +25,12 @@ int main()
 
     return 0;
 }
+
+void displayStudent(StudentTestScores s)
+{
+    cout << "Name: " << s.getStudentName() << endl;
+    cout << "Test Scores: ";
+    for (int i = 0; i < s.getNumTestScores(); i++)
+        cout << s.getTestScore(i) << " ";
+    cout << endl;
+}
